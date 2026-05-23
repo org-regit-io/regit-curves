@@ -1,0 +1,30 @@
+[package]
+name         = "regit-curves"
+version      = "1.0.0"
+edition      = "2024"
+rust-version = "1.85"
+license      = "Apache-2.0"
+description  = "Audit-grade interest-rate yield curve bootstrap and interpolation in pure Rust. Single- and multi-curve (OIS-discounted), discount/zero/forward/par views, full primary-source derivations. Zero dependencies."
+repository   = "https://github.com/org-regit-io/regit-curves"
+homepage     = "https://www.regit.io"
+authors      = ["Nicolas Koenig <nicolas.koenig@regit.io>"]
+keywords     = ["yield-curve", "bootstrap", "interest-rate", "ois", "interpolation"]
+categories   = ["finance", "mathematics", "science"]
+readme       = "README.md"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+
+[dependencies]
+# Runtime dependencies: none. The crate is std-only and zero-dependency by
+# design — see README.md and MATH.md. Every solver, root-finder and linear
+# algebra routine is hand-rolled from its primary source.
+
+[dev-dependencies]
+approx    = "0.5"
+proptest  = "1"
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name    = "curves"
+harness = false
