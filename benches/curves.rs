@@ -16,7 +16,7 @@
 //! | Bootstrap CubicSpline (10 instruments)       | < 2 ms   |
 //! | Multi-curve OIS + 3M (10 instruments)        | < 500 us |
 
-use criterion::{Criterion, black_box, criterion_group, criterion_main};
+use criterion::{Criterion, criterion_group, criterion_main};
 use regit_curves::bootstrap::Bootstrap;
 use regit_curves::curves::DiscountCurve;
 use regit_curves::instruments::{Deposit, Fra, Instrument, OisSwap, SwapFixedFloat};
@@ -25,6 +25,7 @@ use regit_curves::interpolation::{
 };
 use regit_curves::multi_curve::MultiCurveBootstrap;
 use regit_curves::types::{Date, Daycount, Frequency, Tenor, TenorUnit};
+use std::hint::black_box;
 
 // ─── Fixtures ────────────────────────────────────────────────────────────────
 
