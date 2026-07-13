@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 (none)
 
+## [1.0.1] — 2026-07-13
+
+### Changed
+- Bumped the `criterion` dev/bench dependency from 0.5 to 0.8.
+- No runtime or API changes. The public API remains identical to 1.0.0
+  and the crate still has zero runtime dependencies.
+
 ## [1.0.0] — 2026-05-23
 
 First stable release. The public API is frozen under semantic versioning.
@@ -176,5 +183,6 @@ the crate has zero runtime dependencies and compiles cleanly to
   target declared in `Cargo.toml`; `deny.toml` licence allow-list covers
   the permissive dev-dependency tree
 
-[Unreleased]: https://github.com/org-regit-io/regit-curves/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/org-regit-io/regit-curves/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/org-regit-io/regit-curves/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/org-regit-io/regit-curves/releases/tag/v1.0.0
